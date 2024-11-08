@@ -1,13 +1,42 @@
 import React from 'react';
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, Text, Image,StyleSheet,ScrollView} from 'react-native';
 import Movie from './Boat/Boat';
+
+
+const styles = StyleSheet.create({
+    box: {
+        padding: 10
+    },
+    title: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    description: {
+        textAlign: "center",
+        marginTop: 20
+    },
+    header: {
+        alignItems: 'center',
+        justifyContent: "center",
+        fontWeight: "bold",
+        borderWidth: 1,
+        backgroundColor: '#808080',
+        height: 40,
+    },
+    headerText: {
+        fontSize: 18,
+        color: '#fff',
+    }
+})
 
 const AllBoats = () => {
   return (
-      <ScrollView>
+      <ScrollView style={{backgroundColor: "cornflowerblue"}}>
         <Text></Text>
         <Text></Text>
-          <Text style={{color: '#808080'}}>GetABoat - For sale</Text>
+          <View  style={styles.header}>
+              <Text style={styles.headerText}>GetABoat - For sale</Text>
+          </View>
         <Text></Text>
         <Movie name = "Sea Ray 500 Sundancer" description="Contoured lines and dramatic styling reveal a refined and powerful presence that will take your breath away." icon_name={"sailboat"} poster={require("./img/sea_ray.jpg")}/>
         <Movie name = "Four Winns Horizon 180" description="A sporty look and refined details truly set the Horizon 180 above all others." icon_name={"sailboat"} poster={require("./img/four_winns.jpg")}/>
